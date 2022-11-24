@@ -8,7 +8,7 @@
   ❐ *  E-MAIL:            motrik_xxl@mail.ru     * ❑
   ❑ *  TEMPLATE NAME:     Residential Complex    * ❒
   ❐ *  VERSION:                    1.0           * ❑
-  ❑ *  LAST MODIFIED:       December-10-2020     * ❒
+  ❑ *  LAST MODIFIED:       December-12-2022     * ❒
   ❐ ********************************************** ❑
   ❑ ❐ ❑ ❒ ❏ ❐ ❏ ❐ ❑ ❒ ❏ ❐ ❑ ❒ ❑ ❒ ❑ ❐ ❑ ❒ 
 */
@@ -104,96 +104,79 @@ h6 {
 
 /*--------------------*/
 @font-face {
-  font-family: "Playfair Display";
+  font-family: "Neucha";
   font-display: swap;
-  src: url("../fonts/PlayfairDisplay-SemiBold.woff2") format("woff2"), url("../fonts/PlayfairDisplay-SemiBold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: "PostNoBillsJaffna";
-  font-display: swap;
-  src: url("../fonts/PostNoBillsJaffna-SemiBold.woff2") format("woff2"), url("../fonts/PostNoBillsJaffna-SemiBold.woff") format("woff");
-  font-weight: 600;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Raleway";
-  font-display: swap;
-  src: url("../fonts/Raleway-Regular.woff2") format("woff2"), url("../fonts/Raleway-Regular.woff") format("woff");
+  src: url("../fonts/Neucha.woff2") format("woff2"), url("../fonts/Neucha.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
-@font-face {
-  font-family: "Raleway";
-  font-display: swap;
-  src: url("../fonts/Raleway-SemiBold.woff2") format("woff2"), url("../fonts/Raleway-SemiBold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
+.header__body {
+  padding-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(135px, 345px));
+  grid-template-rows: auto;
+  justify-content: space-between;
+  align-items: center;
+  grid-column-gap: 20px;
 }
-@font-face {
-  font-family: "Roboto";
-  font-display: swap;
-  src: url("../fonts/Roboto-Light.woff2") format("woff2"), url("../fonts/Roboto-Light.woff") format("woff");
-  font-weight: 300;
-  font-style: normal;
-}
-@font-face {
-  font-family: "icomoon";
-  src: url("../fonts/icomoon.eot?4xyz1q");
-  src: url("../fonts/icomoon.eot?4xyz1q#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?4xyz1q") format("truetype"), url("../fonts/icomoon.woff?4xyz1q") format("woff"), url("../fonts/icomoon.svg?4xyz1q#icomoon") format("svg");
-  font-weight: normal;
-  font-style: normal;
-  font-display: block;
-}
-[class^=icon-],
-[class*=" icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: "icomoon" !important;
-  speak: never;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.icon-facebook-f:before {
-  content: "\e900";
-}
-
-.icon-linkedin:before {
-  content: "\e901";
-}
-
-.icon-twitter:before {
-  content: "\e902";
-}
-
-.tabs-block__nav {
-  display: flex;
-  justify-content: center;
-  margin: 0px -2px;
-}
-.tabs-block__item {
-  flex: 0 1 33.333px;
-  margin: 0px 2px;
-  background-color: rgb(198, 141, 141);
-  padding: 20px;
+.header__items {
   display: flex;
   align-items: center;
-  cursor: pointer;
 }
-.tabs-block__item._active {
-  background-color: rgb(232, 105, 105);
+@media (max-width: 1100px) {
+  .header__items:nth-child(2) {
+    grid-row: 1;
+    grid-column: 1/3;
+    justify-content: center;
+  }
+  .header__items:first-child {
+    grid-row: 2;
+    grid-column: 1/2;
+  }
+  .header__items:last-child {
+    grid-row: 2;
+    grid-column: 2/3;
+  }
 }
-.tabs-block__body {
-  padding-top: 20px;
-  max-height: 20px;
+.header__items:first-child img, .header__items:last-child img {
+  width: 80px;
+  height: 80px;
 }
+@media (max-width: 1100px) {
+  .header__items:first-child img, .header__items:last-child img {
+    width: calc(50px + 30 * ((100vw - 320px) / 780));
+  }
+}
+@media (max-width: 1100px) {
+  .header__items:first-child img, .header__items:last-child img {
+    height: calc(50px + 30 * ((100vw - 320px) / 780));
+  }
+}
+.header__items:last-child {
+  display: flex;
+  justify-content: flex-end;
+}
+.header__items:nth-child(2) img {
+  width: 400px;
+  height: 275px;
+}
+@media (max-width: 1100px) {
+  .header__items:nth-child(2) img {
+    width: calc(170px + 230 * ((100vw - 320px) / 780));
+  }
+}
+@media (max-width: 1100px) {
+  .header__items:nth-child(2) img {
+    height: calc(150px + 125 * ((100vw - 320px) / 780));
+  }
+}
+.header__text {
+  padding: 0 25px;
+  font-family: "Neucha";
+  font-size: calc(20px + 7 * ((100vw - 320px) / 850));
+  font-weight: 700;
+}
+
 .wrapper {
   width: 100%;
   min-height: 100%;
@@ -204,10 +187,11 @@ h6 {
 
 .page {
   flex: 1 1 auto;
+  font-family: "Neucha";
 }
 
 ._container {
-  max-width: 1115px;
+  max-width: 1100px;
   margin: 0 auto;
   padding: 0 10px;
 }
