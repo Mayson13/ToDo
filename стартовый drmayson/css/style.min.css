@@ -1,0 +1,216 @@
+@charset "UTF-8";
+/*
+  ❏ ❐ ❏ ❐ ❏ ❐ ❏ ❐ ❑ ❒ ❏ ❐ ❏ ❐ ❑ ❒ ❏ ❐ ❑ ❒
+  ❐ ********************************************** ❑
+  ❑ *  AUTHOR:                 Dr. Mayson        * ❒
+  ❐ *  GENERATOR:         Visual Studio Code     * ❑
+  ❑ *  WEBSITE:           http://www.***.com/    * ❒
+  ❐ *  E-MAIL:            motrik_xxl@mail.ru     * ❑
+  ❑ *  TEMPLATE NAME:     Residential Complex    * ❒
+  ❐ *  VERSION:                    1.0           * ❑
+  ❑ *  LAST MODIFIED:       December-10-2020     * ❒
+  ❐ ********************************************** ❑
+  ❑ ❐ ❑ ❒ ❏ ❐ ❏ ❐ ❑ ❒ ❏ ❐ ❑ ❒ ❑ ❒ ❑ ❐ ❑ ❒ 
+*/
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/*--------------------*/
+@font-face {
+  font-family: "Playfair Display";
+  font-display: swap;
+  src: url("../fonts/PlayfairDisplay-SemiBold.woff2") format("woff2"), url("../fonts/PlayfairDisplay-SemiBold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "PostNoBillsJaffna";
+  font-display: swap;
+  src: url("../fonts/PostNoBillsJaffna-SemiBold.woff2") format("woff2"), url("../fonts/PostNoBillsJaffna-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Raleway";
+  font-display: swap;
+  src: url("../fonts/Raleway-Regular.woff2") format("woff2"), url("../fonts/Raleway-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Raleway";
+  font-display: swap;
+  src: url("../fonts/Raleway-SemiBold.woff2") format("woff2"), url("../fonts/Raleway-SemiBold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  font-display: swap;
+  src: url("../fonts/Roboto-Light.woff2") format("woff2"), url("../fonts/Roboto-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "icomoon";
+  src: url("../fonts/icomoon.eot?4xyz1q");
+  src: url("../fonts/icomoon.eot?4xyz1q#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?4xyz1q") format("truetype"), url("../fonts/icomoon.woff?4xyz1q") format("woff"), url("../fonts/icomoon.svg?4xyz1q#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+[class^=icon-],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-facebook-f:before {
+  content: "\e900";
+}
+
+.icon-linkedin:before {
+  content: "\e901";
+}
+
+.icon-twitter:before {
+  content: "\e902";
+}
+
+.tabs-block__nav {
+  display: flex;
+  justify-content: center;
+  margin: 0px -2px;
+}
+.tabs-block__item {
+  flex: 0 1 33.333px;
+  margin: 0px 2px;
+  background-color: rgb(198, 141, 141);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.tabs-block__item._active {
+  background-color: rgb(232, 105, 105);
+}
+.tabs-block__body {
+  padding-top: 20px;
+  max-height: 20px;
+}
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.page {
+  flex: 1 1 auto;
+}
+
+._container {
+  max-width: 1115px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+._container__fullview {
+  width: 100%;
+}
